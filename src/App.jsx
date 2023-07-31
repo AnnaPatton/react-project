@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {puppyList} from './data.js';
 import './App.css';
+import './index.css';
 
 function App() {
 
@@ -21,8 +22,10 @@ console.log(featuredPup);
   
       {featPupId && (
         <div>
-          <h2>{featuredPup.name}</h2>
+          <h2 style={{textAlign: "left", fontSize: "20px"}}>More Info:</h2>
+          <h2 style={{color: "#00B4D8", fontSize: "25px", fontStyle: "italic"}}>{featuredPup.name}</h2>
           <ul>
+            <li>ID: {featuredPup.id}</li>
             <li>Age: {featuredPup.age}</li>
             <li>Email: {featuredPup.email}</li>
           </ul>
